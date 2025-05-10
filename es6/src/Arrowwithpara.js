@@ -11,6 +11,6 @@
     }
 //additionwithpara(5);
 export default additionwithpara; */
-export default function additionwithpara(n) {
-  return <div>arrowwithpara {n} + 5 = {n + 5}</div>;
-}
+export const additionwithpara=(n)=>
+ <div>arrowwithpara {n} + 5 = {n + 5}</div>;
+

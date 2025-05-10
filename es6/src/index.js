@@ -4,7 +4,7 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 import { addition } from './Arrow';
-import additionwithpara from './Arrowwithpara';
+import {additionwithpara} from './Arrowwithpara';
 import Demo from './Es6file';
 
 // Render arrow function without parameters
