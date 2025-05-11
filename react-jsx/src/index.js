@@ -1,5 +1,6 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
+import './index.css'
 
 const mystyle = {
   color: 'blue',
@@ -8,8 +9,8 @@ const mystyle = {
 
 const myele = (
   <div style={mystyle}>
-    <h1>Welcome</h1>
-    <h2>Hello World</h2>
+    <h1>Welcome {5+5}</h1>
+    <h2 className='header2'>Hello World</h2>
   </div>
 );
 
