@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+</head>
+<!--Use arrow functions when you want to inherit this from the outer scope.
+
+Use regular functions if you need dynamic this, but remember to bind them when needed.
+
+In React (especially class components), arrow functions are often simpler and avoid binding issues.-->
+<body>
+<button id="btn">click me!</button>
+<h1 id="myheading">Its heading tag</h1>
+    <div id="mydiv">Its div tag</div>
+    <p>In regulr function the <b>this</b> keyword represents:</p>
+    <p id="demo"></p>
+</body>
+    <script>
+class RegvsArr{
+    //Regular function
+    changeColor=function(){
+    //Arrow function
+   // changeColor=()=>{
+        document.getElementById("demo").innerHTML+=this;
+    }
+}
+var regvsarr=new RegvsArr();
+
+window.addEventListener("load",regvsarr.changeColor);
+document.getElementById("btn").addEventListener("click",regvsarr.changeColor);
+document.getElementById("mydiv").addEventListener("click",regvsarr.changeColor);
+document.getElementById("myheading").addEventListener("click",regvsarr.changeColor);
+/*Output for Regular functon
+window onload =[object Window]
+button click=[object HTMLButtonElement]
+div click=[object HTMLDivElement]
+heading click=[object HTMLHeadingElement
+
+Output for Arrow functon
+[object Object]
+*/
+    </script>
+
+
+
+</html>
