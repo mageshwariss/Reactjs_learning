@@ -21,7 +21,9 @@ Concepts Covered
 4.All-components(functional-component,Class component,External Component,Main Component
 
 5.react-jsx
+
 6.react-props
+
 7.react-state
 
 Getting Started
