@@ -13,9 +13,13 @@ Example code implementing the concept
 Concepts Covered
 
 1.Introcode
+
 2.my-app
+
 3.es6
-4.All-components(functional-component,Class component,External Component,Main Component)
+
+4.All-components(functional-component,Class component,External Component,Main Component
+
 5.react-jsx
 6.react-props
 7.react-state
