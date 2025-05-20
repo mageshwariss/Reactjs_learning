@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>React List Example</title>
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="listval"></div>
+
+  <script type="text/babel">
+    function ListKey(props) {
+      return <li>{props.keys} {props.item}</li>;
+    }
+
+    function MyList(props) {
+      const listItems = props.myvalue.map((value, index) => (
+        <ListKey keys={index} item={value} />
+      ));
+      return (
+        <div>
+          <h2>Correct key Usage Example</h2>
+          <ul>{listItems}</ul>
+        </div>
+      );
+    }
+
+    const mydata = [200, 1000, 5000, 300];
+    const root = ReactDOM.createRoot(document.getElementById('listval'));
+    root.render(<MyList myvalue={mydata} />);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React JSX Test</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+<div id="listval"></div>
+    <script type="text/babel">
+      function Menubar(props) {
+        const content = props.data.map((show) =>
+          <div key={show.id}>
+            <h3>{show.id}: {show.title}: {show.content}</h3>
+          </div>
+        );
+        return <div>{content}</div>;
+      }
+
+      const myvalue = [
+        { id: 1, title: 'First', content: 'Welcome to my ReactJS' },
+        { id: 2, title: 'Second', content: 'Learn all the programming languages in Tamil' }
+      ];
+
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(<Menubar data={myvalue} />);
+    </script>
+    
+   
+  </body>
+</html>
